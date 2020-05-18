@@ -16,11 +16,14 @@ const int led_pin = 22;
 const int led_obscure = 23;
 const int lumiere_pin = 33;
 const int temperature_pin = 32;
-const int light_buzzer= 7;
+const int light_buzzer= 15;
+const int temp_buzzer = 27;
+const int sens_buzzer = 2;
 
 
 
 
+ 
 //-----------------------definition de Host-------------------------//
 
 const char* host = "dweet.io";
@@ -34,6 +37,8 @@ void setup() {
   pinMode(lumiere_pin, INPUT);
   pinMode(temperature_pin, INPUT);
   pinMode(light_buzzer,OUTPUT);
+  pinMode(temp_buzzer,OUTPUT);
+  pinMode (sens_buzzer,OUTPUT);
   pinMode(led_sens,OUTPUT);
   pinMode(cap_sens,INPUT);
    // Start Serial
@@ -77,7 +82,8 @@ void loop() {
 
   float temperature_status = analogRead(temperature_pin)/100;
 
-    if(temperature_status >=23){
+    if(temperature_status >=15){
+      digitalWrite(temp_buzzer,HIGH);
       digitalWrite(led_temp, HIGH);
       delay(500);     
       digitalWrite(led_temp, LOW);
@@ -85,6 +91,7 @@ void loop() {
      }
      else
      {
+      digitalWrite(temp_buzzer,LOW);
        digitalWrite(led_temp, LOW);
      }
 
@@ -95,13 +102,15 @@ void loop() {
   
   float lumiere_status = analogRead(lumiere_pin)/10;
 
-   if(lumiere_status <= 15){
+   if(lumiere_status <= 200){
+    digitalWrite(light_buzzer,HIGH);
     digitalWrite(led_pin, HIGH);
     delay(500); 
     digitalWrite(led_obscure, HIGH); 
     }
       else
     {
+      digitalWrite(light_buzzer,LOW);
       digitalWrite(led_pin, LOW);  
       digitalWrite(led_obscure, LOW);   
     }
@@ -112,12 +121,14 @@ void loop() {
 
 
    float sensor_status = digitalRead(cap_sens);
-   if(sensor_status == 1){
+   if(sensor_status == 0){
     digitalWrite(led_sens, HIGH); 
+    digitalWrite(sens_buzzer,HIGH);
     }
       else
     {
-      digitalWrite(led_sens, LOW);  
+      digitalWrite(led_sens, LOW);
+      digitalWrite(sens_buzzer,LOW);  
     }
 
     Serial.print("Sensoriel: ");
