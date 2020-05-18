@@ -1,0 +1,16 @@
+nom de la base des données :bddarduino
+
+lien: https://dweet.io:443/dweet/for/bddarduino
+
+
+le tableau de bord se trouve sur le lien suivant
+
+https://freeboard.io/board/aELFB8
+
+vous pouvez aussi vous connecter directement avec le compte freeboard
+
+compte freeboard
+ 
+login: tpiot
+
+mot de passe :tpiot (en minuscule)
