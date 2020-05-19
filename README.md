@@ -21,6 +21,7 @@ le tableau de bord se trouve sur le lien suivant
 
 https://freeboard.io/board/aELFB8
 
+
 vous pouvez aussi vous connecter directement avec le compte freeboard
 
 compte freeboard
@@ -29,17 +30,3 @@ login: tpiot
 
 mot de passe :tpiot (en minuscule)
 
-
-
-Shiftr.io
-
-Profile name : projetiot
-
-ngolarols@gmail.com
-
-mdp: projetiot2020
-
-
-namespace:smartHouse
-
-URLtoken : mqtt://arduinoiot:arduinoiot@broker.shiftr.io
