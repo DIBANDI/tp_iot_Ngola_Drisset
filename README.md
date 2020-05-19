@@ -1,6 +1,9 @@
 # tp_iot_Ngola_Drisset
 Tp d'internet des objets, maison intelligente
 
+sur votre arduino lancez lz fichier sujet_arduino_nano_tp_menez_data.ino et remplacer le SSID et le password par celui de votre point d'acces ou votre wifi.
+ensuite allez sur le lien, https://freeboard.io/board/aELFB8
+
 Voici le mode operatoire, Vous devez lancer le lien  https://freeboard.io/board/aELFB8, si vous ne parvenez pas à vous connecter,
 vous avez l'identifiant et le mot de passe juste en dessous.
 
