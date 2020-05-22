@@ -102,16 +102,16 @@ void loop() {
   
   float lumiere_status = analogRead(lumiere_pin)/10;
 
-   if(lumiere_status <= 200){
+   if(lumiere_status <= 10){
     digitalWrite(light_buzzer,HIGH);
-    digitalWrite(led_pin, HIGH);
+    //digitalWrite(led_pin, HIGH);
     delay(500); 
     digitalWrite(led_obscure, HIGH); 
     }
       else
     {
       digitalWrite(light_buzzer,LOW);
-      digitalWrite(led_pin, LOW);  
+      //digitalWrite(led_pin, LOW);  
       digitalWrite(led_obscure, LOW);   
     }
 
